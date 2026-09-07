@@ -12,11 +12,11 @@ An end-to-end analytics case study exploring whether weather conditions can impr
 [1. Project Context](#project-context)  
 [2. Data Sources](#data-sources)  
 [3. Methodology](#methodology)  
-[4. Data Preperation & EDA](#data-preparation--eda)  
+[4. Data Preparation & EDA](#data-preparation--eda)  
 [5. Demand Forecasting](#demand-forecasting)  
 [6. Workforce Impact ](#workforce-impact)  
 [7. Project Limitations](#project-limitations)  
-[8. Insights & Recommendations ](#-key-insights--recommendations-)  
+[8. Key Insights & Recommendations ](#key-insights--recommendations)  
 
 ---
 
@@ -24,7 +24,7 @@ An end-to-end analytics case study exploring whether weather conditions can impr
 
 Retail demand is influenced by more than historical sales patterns. External factors such as temperature, precipitation, and snowfall can affect consumer behavior, potentially making weather useful for anticipating changes in demand.
 
-This project explores whether incorporating weather data into retail demand forecasting can provide meaningful improvements over traditional time-series models — and, more importantly, whether those improvements can translate into better workforce planning
+This project explores whether incorporating weather data into retail demand forecasting can provide meaningful improvements over traditional time-series models — and, more importantly, whether those improvements can translate into better workforce planning.
 
 ### Key Questions & Hypotheses
 
@@ -44,10 +44,10 @@ The project combines retail demand, weather, employment, and earnings data from 
 
 | Dataset                 | Source                | Frequency | Purpose                                                   |
 | ----------------------- | --------------------- | --------- | --------------------------------------------------------- |
-| Ontario Retail Sales    | [Statistics Canada]() | Monthly   | Historical demand across 28 retail subsectors             |
-| Ontario Weather         | [NASA POWER API]()    | Daily     | Weather indicators used as external forecasting variables |
-| Employment              | [Statistics Canada]() | Monthly   | Estimate workforce requirements from retail demand        |
-| Average Weekly Earnings | [Statistics Canada]() | Monthly   | Estimate labor costs and staffing mismatch penalties      |
+| Ontario Weather         | [NASA POWER API](https://power.larc.nasa.gov/)    | Daily     | Weather indicators used as external forecasting variables |
+| Ontario Retail Sales    | [Statistics Canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010005601) | Monthly   | Historical demand across 28 retail subsectors             |
+| Employment              | [Statistics Canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410035501) | Monthly   | Estimate workforce requirements from retail demand        |
+| Average Weekly Earnings | [Statistics Canada](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410020301) | Monthly   | Estimate labor costs and staffing mismatch penalties      |
 
 ## Methodology
 
@@ -70,7 +70,7 @@ Key preparation and analytical steps included:
 
 - Cleaning and temporally aligning the retail and weather datasets.
 - Engineering **Heating Degree Days (HDD)**, **Cooling Degree Days (CDD)**, and snow-day indicators.
-- Choosing which predectors will be passed to the model through correlation and **VIF analysis**.
+- Choosing which predictors will be passed to the model through correlation and **VIF analysis**.
 - Applying **STL decomposition** to separate trend and seasonality from retail demand, allowing weather relationships to be examined against the residual demand component.
 - Using **cross-correlation at lags 0–3 months** between weather variables and **STL residual demand** to identify the most weather-sensitive subsectors and narrow the original 28 retail sectors to five forecasting candidates.
 
@@ -108,7 +108,7 @@ _Comparison of SARIMA and SARIMAX forecast accuracy across the selected retail s
 
 The second phase tested whether improvements in forecast accuracy translated into better staffing decisions.
 
-Monthly forecasts were converted into workforce requirements using Ontario employment and wage data, then compared against staffing needs implied by actual demand. The analysis measured **overstaffing, understaffing, total workforce mismatch, and modeled penalty cost** across the same 47 forecast periods using a Linear Programming model.
+Monthly forecasts were converted into workforce requirements using Ontario employment and wage data, then compared against staffing needs implied by actual demand. The analysis measured **overstaffing, understaffing, total workforce mismatch, and modeled penalty cost** across the same 47 forecast periods.
 
 ![Workforce mismatch comparison under SARIMA- and SARIMAX-based staffing decisions](assets/workforce.png)
 
@@ -124,7 +124,7 @@ This aggregation likely weakened the observable effect of short-term weather eve
 
 For this reason, the project should be viewed primarily as a demonstration of the **analytical framework and end-to-end pipeline** for weather-informed demand forecasting and workforce planning. The methodology is transferable, but stronger conclusions about the predictive value of weather would require **daily or transaction-level demand data**.
 
-## ✦ Key Insights & Recommendations ✦
+## Key Insights & Recommendations
 
 The results suggest that weather-informed forecasting should be applied **selectively rather than universally**. Under the available monthly data, SARIMAX improved forecast accuracy and downstream workforce outcomes only for one sector, while the remaining sectors showed little or no benefit from adding weather variables.
 
@@ -140,7 +140,6 @@ The results suggest that weather-informed forecasting should be applied **select
 ---
 
 
-
 ### How to Run
 
 Run the notebooks in numerical order:
@@ -150,13 +149,14 @@ Run the notebooks in numerical order:
 3. Build and evaluate demand forecasting models.
 4. Translate forecast outputs into workforce impact analysis.
 
-A detailed report of the project, including the complete methodology, statistical analysis, and results, can be accessed [HERE!](report/capstone-report.pdf)
+A detailed report of the project, including the complete methodology, statistical analysis, and results, can be accessed [HERE!](report/report.pdf)
 
 ### Contributors :
 
 [Mustafa Abdulmegid](https://github.com/awafa116) |
 [Renan Da Silva Sousa](https://github.com/RenanSdeSilva) |
-[Alfredo Villalobos](https://github.com/AlfredoVilla97)
+[Alfredo Villalobos](https://github.com/AlfredoVilla97) |
+[David Enejo](.)
 
 <br/>
 <br/>
