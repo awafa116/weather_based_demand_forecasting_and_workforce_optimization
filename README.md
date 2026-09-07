@@ -2,23 +2,21 @@
 
 <kbd>Python</kbd>
 <kbd>Pandas</kbd>
+<kbd>NumPy</kbd>
 <kbd>Statsmodels</kbd>
 <kbd>SciPy</kbd>
 <kbd>Matplotlib</kbd>
-<kbd>Power BI</kbd>
 
 An end-to-end analytics case study exploring whether weather conditions can improve retail demand forecasts in Ontario, and how forecast quality can influence downstream workforce planning.
 
-**_Table of contents_**  
- [1. Project Context](#project-context)  
- [2. Data Sources](#data-sources)  
- [3. Methodology](#methodology)  
- [4. Data Preperation & EDA](#data-preparation--eda)  
- [ ]()  
- [ ]()  
- [ ]()  
- [ ]()  
- [ ]()
+[1. Project Context](#project-context)  
+[2. Data Sources](#data-sources)  
+[3. Methodology](#methodology)  
+[4. Data Preperation & EDA](#data-preparation--eda)  
+[5. Demand Forecasting](#demand-forecasting)  
+[6. Workforce Impact ](#workforce-impact)  
+[7. Project Limitations](#project-limitations)  
+[8. Insights & Recommendations ](#-key-insights--recommendations-)  
 
 ---
 
@@ -137,15 +135,11 @@ The results suggest that weather-informed forecasting should be applied **select
 - Monthly retail data likely limits the ability to capture short-term, event-driven weather effects.
 - Future implementations should prioritize **daily or transaction-level demand data** to better capture short-term weather effects.
 
-<br/>
 
 ---
-
 ---
 
----
 
-<br/>
 
 ### How to Run
 
@@ -160,12 +154,12 @@ A detailed report of the project, including the complete methodology, statistica
 
 ### Contributors :
 
-- [Mustafa Abdulmegid](https://github.com/awafa116)
-- [Renan Da Silva Sousa](https://github.com/RenanSdeSilva)
-- [Alfredo Villalobos](https://github.com/AlfredoVilla97)
+[Mustafa Abdulmegid](https://github.com/awafa116) |
+[Renan Da Silva Sousa](https://github.com/RenanSdeSilva) |
+[Alfredo Villalobos](https://github.com/AlfredoVilla97)
 
 <br/>
+<br/>
+<br/>
 
----
-
-$\color{#FFffff80}{\textsf{-- Mustafa Abdulmegid · MARCH 2026 --}}$
+<div align="center"> -- Mustafa Abdulmegid · MARCH 2026 -- </div>
